@@ -5,3 +5,38 @@ img.recipe-show {
 	height: auto;
 
 }
+
+.recipe-box {
+border: 1px solid black;
+height: 600px;
+position: relative;
+box-shadow: 10px 10px 5px #888888;
+background: #bdc3c7;
+margin-bottom: 20px;
+}
+
+img.recipe-index {
+
+width: 100%;
+
+height: 70%;
+
+object-fit: cover;
+
+}
+
+.recipe-box ul {
+
+list-style-type:none;
+
+position: absolute;
+
+bottom: 0;
+
+}
+
+.recipe-box li:first-child {
+
+font-size: 24px;
+
+}

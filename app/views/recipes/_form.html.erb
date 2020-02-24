@@ -12,20 +12,15 @@
   <% end %>
 
   <div class="form-group">
-
     <%= form.file_field :image %>
-
     <% if @recipe.image? %>
-
       <%= image_tag @recipe.image.url, class: "recipe-show" %>
-
+      <br>
       <%= form.check_box :remove_image %>
-
-        Remove Image
-
-    <% end %>
-
- </div>
+        Remove Image  
+      </br> 
+  </div>
+<% end %>
 
   <div class="field">
     <%= form.label :title %>
@@ -51,11 +46,6 @@
 <div class="links">
 <%= link_to_add_association 'Add Step', form, :steps %>
 </div>
-
-  <div class="field">
-    <%= form.label :text %>
-    <%= form.text_field :text %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>
