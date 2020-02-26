@@ -10,6 +10,19 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded"> 
+
+  <%= link_to "Recipe App Logo", root_path, class: 'navbar-brand' %>
+
+
+    <ul class="navbar-nav navbar-right">
+
+      <li><%= link_to "About", pages_about_path %></li>
+
+    </ul>
+
+
+</nav>
     <%= yield %>
   </body>
 </html>
