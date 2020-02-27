@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="col">
 <% if @recipe.image? %>
 
 <%= image_tag @recipe.image.url, class: "recipe-show" %>
@@ -7,13 +7,14 @@
 <% end %>
 
 <p>
-  <strong>Title:</strong>
+  <h1>
   <%= @recipe.title %>
-</p>
+  </h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @recipe.description %>
+  <strong>  
+  	<%= @recipe.description %>
+  </strong>
+
 </p>
 
 
