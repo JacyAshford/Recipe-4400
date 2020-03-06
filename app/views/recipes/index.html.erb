@@ -4,9 +4,14 @@
 <div class="hero">
 <%= image_tag ("images/hero.jpeg")%>
 </div>
+  <div class="hero-text">
+    <h1 class="index-text">
+    Recipes</h1>
+    <p class="index-text">This is a description about the recipes</p>
 </div>
+</div>
+<br>
 <div class="col">
-<h1>Recipes</h1>
 <div class="row">
     <% @recipes.each do |recipe| %>
     <div class="col-md-4">
@@ -15,14 +20,20 @@
       <%= link_to (image_tag recipe.image.url, class: "recipe-index"), recipe %>
     <% end %>
     <ul>
-        <li><%= recipe.title %></li>
-        <li><%= recipe.description %></li>
-        <li><%= link_to 'Show', recipe %> |
+        <li class="index-text"><%= recipe.title %></li>
+        <li class="index-text"><%= recipe.description %></li>
+        <li class="btn btn-1">
+        <%= link_to 'Show', recipe %>
+        </li>
+        <li class="btn btn-1">
         <%= link_to 'Edit', edit_recipe_path(recipe) %>
-      <%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+        </li>
+        <li class="btn btn-1">
+        <%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></li>
     </ul>
   </div><!-- /recipe-box-->
 </div><!--col-md-4-->
+</br>
     <% end %>
 </div>
 </div>

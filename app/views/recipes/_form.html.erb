@@ -1,4 +1,3 @@
-<div class="col">
 <%= form_with(model: recipe, local: true) do |form| %>
   <% if recipe.errors.any? %>
     <div id="error_explanation">
@@ -13,7 +12,7 @@
   <% end %>
 
 <form>
-  <div class="form-group">
+<div class="form-group">
     <%= form.file_field :image %>
     <% if @recipe.image? %>
       <%= image_tag @recipe.image.url, class: "recipe-show" %>
@@ -25,7 +24,7 @@
 <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :recipe_title %>
     <%= form.text_field :title %>
   </div>
 
@@ -33,6 +32,8 @@
     <%= form.label :description %>
     <%= form.text_field :description %>
   </div>
+
+  <div class="field">
 <h3>Add Ingredients</h3>
 <%= form.fields_for :ingredients do |ingredient| %>
 <%= render 'ingredient_fields', f: ingredient %>
@@ -40,7 +41,9 @@
 <div class="links">
 <%= link_to_add_association 'Add Ingredient', form, :ingredients %>
 </div>
+</div>
 
+<div class="field">
 <h3>Add Steps</h3>
 <%= form.fields_for :steps do |step| %>
 <%= render 'step_fields', f: step %>
@@ -48,10 +51,10 @@
 <div class="links">
 <%= link_to_add_association 'Add Step', form, :steps %>
 </div>
+</div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
-</div>
 </form>
 <% end %>
